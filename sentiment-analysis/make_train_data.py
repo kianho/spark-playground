@@ -24,8 +24,11 @@ import sys
 import re
 import codecs
 import pandas
+import re
 
 from docopt import docopt
+
+NEWLINE_RE = re.compile(r"[\n\r]+")
 
 if __name__ == '__main__':
     opts = docopt(__doc__)
@@ -35,6 +38,8 @@ if __name__ == '__main__':
     for fn in ( ln.strip() for ln in sys.stdin ):
         with open(fn) as f:
             blob = codecs.getreader(opts["--encoding"])(f).read()
+            # Wrangle multiline strings into a single line.
+            blob = NEWLINE_RE.sub(" ", blob)
         records.append((label, blob))
 
     df = pandas.DataFrame.from_records(records, columns=None)
