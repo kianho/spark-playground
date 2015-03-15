@@ -16,7 +16,7 @@
 4. Clone this repository:
   - `git clone git@github.com:kianho/spark-playground.git`
 
-5. Change the `SPARK_HOME` in [`Makefile.in`](Makefile.in) to the install
+5. Change the `SPARK_HOME` variable in [`Makefile.in`](Makefile.in) to the install
    directory used in step 3.
 
 ## Example usage
