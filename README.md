@@ -3,8 +3,7 @@
 ## Installation (Ubuntu)
 
 1. Download and install Python 2.7.x using one of the following methods:
-  - via the command-line:
-    - `sudo apt-get install python2.7`
+  - `sudo apt-get install python2.7`
   - [Anaconda Python Distribution](download-anaconda)
   - [https://www.python.org/downloads/](download-python)
 
@@ -22,7 +21,7 @@
 
 ## Example usage
 
-Experiment with sentiment analysis:
+Experiment with sentiment analysis, run the following:
 ```
 cd ./spark-playground/sentiment-analysis/
 make polarity2.0
@@ -35,6 +34,5 @@ which will:
 4. compute and display performance measures to stdout.
 
 
-[download-spark](https://spark.apache.org/downloads.html)
-[download-anaconda](http://continuum.io/downloads)
-[download-python](https://www.python.org/downloads/)
+[download-spark]: https://spark.apache.org/downloads.html
+[download-anaconda]: http://continuum.io/downloads
