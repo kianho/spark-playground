@@ -11,5 +11,5 @@
 include ../Makefile.in
 
 all:
-	$(SPARK_SUBMIT) --master local[4] ./doc-id-feat-request.py
+	$(SPARK_SUBMIT) ./doc-id-feat-request.py
 
