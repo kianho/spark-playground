@@ -9,13 +9,7 @@
 # Usage:
 #   ...
 # 
-export SHELL
-SHELL:=/bin/bash
-.SECONDARY:
-
-# Change this according to your own spark installation.
-SPARK_SUBMIT:=~/Downloads/spark-1.3.0-bin-hadoop2.4/bin/spark-submit
-
+include Makefile.in
 
 all: data/polarity2.0/polarity2.0.csv
 	$(SPARK_SUBMIT) ./run.py -i $<
