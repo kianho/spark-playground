@@ -11,6 +11,7 @@
 # 
 include Makefile.in
 
+# Run the proof-of-concept pyspark experiment.
 all: data/polarity2.0/polarity2.0.csv
 	$(SPARK_SUBMIT) ./run.py -i $<
 
