@@ -30,6 +30,7 @@ from docopt import docopt
 
 NEWLINE_RE = re.compile(r"[\n\r]+")
 
+
 if __name__ == '__main__':
     opts = docopt(__doc__)
 
