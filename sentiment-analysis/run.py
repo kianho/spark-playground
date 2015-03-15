@@ -62,7 +62,7 @@ def load_record(line, **reader_kwargs):
 
 
 def tokenize(text):
-    return [ w for w in word_tokenize(text) if not NON_TOKEN_RE.search(w) ]
+    return [ w.lower() for w in word_tokenize(text) if not NON_TOKEN_RE.search(w) ]
  
 
 if __name__ == '__main__':
@@ -77,7 +77,7 @@ if __name__ == '__main__':
                 fieldnames=["label", "text"]))
 
     hashing_tf = HashingTF()
-    #idf = IDF()
+    idf = IDF()
 
     # Wrangling
     #
@@ -86,5 +86,3 @@ if __name__ == '__main__':
     train_rdd = raw_rdd.map(
         lambda rec : LabeledPoint(int(rec["label"]),
                                   hashing_tf.transform(tokenize(rec["text"]))))
-
-    print train_rdd.take(5)
